@@ -1,0 +1,6 @@
+{
+    "python.analysis.extraPaths": [
+        "./Service_files",
+        "./utils"
+    ]
+}

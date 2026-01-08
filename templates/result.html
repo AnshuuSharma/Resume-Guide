@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Resume Mentor Feedback</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #0d0618;
+      padding: 40px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background:  #1a0f2e;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    h1 {
+      margin-bottom: 10px;
+      color:#b543aa
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .ai {
+      background-color: #e8f0ff;
+      color: #1a4ed8;
+    }
+
+    .rule {
+      background-color: #fff3cd;
+      color: #856404;
+    }
+
+    .guidance h3 {
+    margin-top: 20px;
+    margin-bottom: 8px;
+}
+
+.guidance ul {
+    margin-top: 0;
+    padding-left: 20px;
+}
+
+.guidance li {
+    margin-bottom: 8px;
+}
+
+
+    .guidance {
+      white-space: normal;
+      font-size: 16px;
+      color:#a499eb;
+    }
+
+    .footer {
+      margin-top: 30px;
+      font-size: 14px;
+      color: #777;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Resume Mentor Feedback</h1>
+
+    <div class="guidance">
+        {% for heading, points in sections.items() %}
+    <h3>{{ heading }}</h3>
+    <ul>
+      {% for point in points %}
+        <li>{{ point }}</li>
+      {% endfor %}
+    </ul>
+  {% endfor %}
+    </div>
+
+    <div class="footer">
+      This feedback is intended to help you improve your resume for the given job description.
+    </div>
+  </div>
+</body>
+</html>
